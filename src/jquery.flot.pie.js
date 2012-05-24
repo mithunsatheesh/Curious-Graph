@@ -15,7 +15,7 @@ internally calculates the total and percentages.
 	2009-11-11: Added basic hover from btburnett3 - does not work in IE, and center is off in Chrome and Opera
 	2009-11-17: Added IE hover capability submitted by Anthony Aragues
 	2009-11-18: Added bug fix submitted by Xavi Ivars (issues with arrays when other JS libraries are included as well)
-		
+	2011-10-18: Added added changes in draw slices. Varied the slice radis and eracing slice to modify pie shape. - Mithun Satheesh	
 
 Available options are:
 series: {
