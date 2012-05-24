@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link type="text/css" rel="stylesheet" href="demo/style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>  
+<script language="javascript" type="text/javascript" src="http://yandex.st/jquery/flot/0.7/jquery.flot.js"></script>
+<script language="javascript" type="text/javascript" src="src/jquery.flot.pie.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+						   
+						  data = [
+		{ label: "USA",  data: Math.floor(Math.random()*101), color:'#2389FE'},
+		{ label: "UK",  data: Math.floor(Math.random()*101), color:'#ffcc2a'},
+		{ label: "Malasia",  data: Math.floor(Math.random()*101), color:'#ee2f5a'},
+		{ label: "Singapore",  data: Math.floor(Math.random()*101), color:'#615f53'},
+		{ label: "Australia",  data: Math.floor(Math.random()*101), color:'#a9df23'}
+	];
+	
+   $("#demo_container").hide();
+	
+	$.plot($("#demo_container"), data, 
+	{
+		series: {
+			pie: { 
+				innerRadius: 0.4,
+				radius:0.8,
+				innerLabel:{text:'name',color:"#ffcc2a"},
+				show: true,
+				stroke:{color:'#000',width:1},
+				offset:{top:10,left:10}
+			}
+		},
+		grid: {
+            hoverable: true,
+            clickable: true
+        },
+        legend: {
+            show: true,
+			text: "Revenue Distribution per region (INR)"
+        }
+	});
+	$("#demo_container").slideDown();
+						  					   
+						   });
+
+</script>
+</head>
+
+<body>
+
+<h1 class="toplogo">Zingreel <br />
+ A FLOT PLIE Graph Plugin Extention</h1>
+
+<p>
+This is a modification to pie charting script of jquery graph library flot. Developed for the admin-end data manipulations of Zingreel.com. A online movie rental website. The pie graph was modified to a more attractive appearance. 
+</p>
+
+
+<h1>USAGE</h1>
+
+<p>Plugin usage same as flot with additional options added on as shown below.</p>
+
+<br />
+
+<p>javascript</p>
+<pre>
+
+$(document).ready(function(){
+
+	$.plot($("#demo_container"), data, 
+	{
+		series: {
+			pie: { 
+				innerRadius: 0.4,
+				radius:0.8,
+				innerLabel:{text:'name',color:"#ffcc2a"},
+				show: true,
+				stroke:{color:'#000',width:1},
+				offset:{top:10,left:10}
+			}
+		},
+		grid: {
+            hoverable: true,
+            clickable: true
+        },
+        legend: {
+            show: true,
+			text: "Revenue Distribution per region (INR)"
+        }
+	});
+
+});
+</pre>
+
+
+<p>html</p>
+<pre>
+
+&lt;div id=&quot;demo_container&quot; style=&quot;width: 800px;height: 500px;float: left;&quot;&gt;
+    
+   &lt;/div&gt;
+
+</pre>
+
+
+<h1>DEMO</h1>
+
+<p><a href="" style="text-decoration:none;color:#06F;font-weight:800;">Refresh</a> this page to see a new plot.</p>
+
+<div id="demo_container" style="width:900px;height: 500px;">
+
+
+
+
+</div>
+
+<br />
+<p>screenshot of plot using normal flot pie</p>
+<div>
+<img src="demo/old-screenshot.JPG" />
+</div>
+
+
+<h1>Browser Support</h1>
+
+<p> Tested on Firefox 3.0 + , Chrome & Safari </p>
+
+
+
+<h1>Change Log</h1>
+<p>Extention to Jquery flot 0.7</p>
+
+</body>
+</html>

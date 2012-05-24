@@ -1,0 +1,62 @@
+h1. Zingreel - A FLOT PLIE Graph Plugin Extention
+
+*Version:* Extention to Jquery flot 0.7
+
+*License:* "same as Jquery flot 0.7"
+
+*Author:* "Mithun Satheesh"
+
+
+h2. About
+
+This is a modification to pie charting script of jquery graph library flot. Developed for the admin-end data manipulations of Zingreel.com. A online movie rental website. The pie graph was modified to a more attractive appearance.   
+
+h2. Browser Support
+
+Tested on Firefox 3.0 + , Chrome & Safari 
+
+h2. Use
+
+Plugin usage same as flot with additional options added on as shown below.
+
+h3. javascript
+
+<pre>
+$(document).ready(function(){
+
+	$.plot($("#demo_container"), data, 
+	{
+		series: {
+			pie: { 
+				innerRadius: 0.4,
+				radius:0.8,
+				innerLabel:{text:'name',color:"#ffcc2a"},
+				show: true,
+				stroke:{color:'#000',width:1},
+				offset:{top:10,left:10}
+			}
+		},
+		grid: {
+            hoverable: true,
+            clickable: true
+        },
+        legend: {
+            show: true,
+			text: "Revenue Distribution per region (INR)"
+        }
+	});
+    
+});
+</pre>
+
+h3. html
+
+
+<pre>
+<div id="demo_container" style="width: 800px;height: 500px;float: left;"></div>
+</pre>
+
+
+h2. Changelog
+
+*Extention to Jquery flot 0.7
