@@ -1,4 +1,4 @@
-h1. Zingreel - A FLOT PLIE Graph Plugin Extention
+h1. Curious-Graph - A FLOT PIE Graph Plugin Extention
 
 *Version:* Extention to Jquery flot 0.7
 
